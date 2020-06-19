@@ -4,10 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link
-			href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
-			rel="stylesheet"
-		/>
+		<link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet"/>
 		<link rel="stylesheet" href="./css/styles.css" />
 		<title>MEAN Stack Tutorial</title>
 	</head>
@@ -15,40 +12,83 @@
 		<header>
 			<div class="logo-container">
 				<img src="./image/stack.png"alt="logo" />
-				<h4 class="logo"> <b></p></b></h4>
+				<h4 class="logo">Node & Express with GCP<br>Application Stack</p></h4>
 			</div>
 			<nav>
 				<ul class="nav-links">
-                    <li><a class="nav-link" href="#">Home</a></li>
-                    <li><a class="nav-link" href="#">Angular</a></li>
-					<li><a class="nav-link" href="#">Node</a></li>
-					<li><a class="nav-link" href="#">Express</a></li>
-					<li><a class="nav-link" href="#">MongoDB</a></li>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+					<li><a class="nav-link" href="node.html">Node</a></li>
+					<li><a class="nav-link" href="express.html">Express</a></li>
+					<li><a class="nav-link" href="helloWorld.html">Hello World</a></li>
 				</ul>
 			</nav>
 			<div class="gitHub">
-				<img src="./image/githublogo.png" alt="gitHub" />
+				<a target="_blank" href="https://github.com/Kerkphon/stacktest"> 
+				<img src="./image/githublogo.png" alt="gitHub" /> </a>
 			</div>
 		</header>
 
 		<main>
+			<div class="cover">
+				<img src="./image/meantran2.png" alt="MongoDB, Nodejs, Expressjs, Angularjs"/>
+			</div>
 			<section class="presentation">
 				<div class="introduction">
 					<div class="intro-text">
-						<h1>What is the MEAN STACK?</h1>
+						<h1>What is the MEAN Stack?</h1>
 						<p>
 							The term MEAN stack refers to a collection of JavaScript-based technologies used to develop web applications.
 							MEAN is an acronym for MongoDB, ExpressJS, AngularJS, and Node.js. 
 							From client to server to database, MEAN is full-stack JavaScript.
 						</p>
+						<br>
+						<h2>Node.JS</h2>
+                        <p>
+							Node.js is similar in design and influenced by systems like Ruby's EventMachine and Python's Twisted. 
+							Node.js takes the event model even further. It presents an event loop as a runtime construct instead of as a library. 
+							In other systems, there is always a blocking call to start the event-loop. 
+							Usually behavior is defined through callbacks at the beginning of a script, and at the end a server is started through a blocking call like EventMachine::run(). In Node.js, there is no such start-the-event-loop call.
+							Node.js enters the event loop after executing the input script. 
+							Node.js exits the event loop when there are no more callbacks to perform.Node.js hides the event loop from the user.
+							<br>
+							<h3 class ="h3"><strong>Click here for </strong><a href="node.html"><i>Nodejs Tutorial</a></i></h3>
+						</p> 
+						<br>
+						<h2>ExpressJS</h2>
+                        <p>
+							ExpressJS is a web application framework that provides us with a simple API to build websites, web apps and back ends for those websites. 
+							With ExpressJS, low level protocols and processes are not a major problem.Express provides a minimal interface to build our applications. 
+							It gives us the tools that are required to build the apps we want to build. 
+							It is flexible because there are so many modules available on npm, which can be directly plugged into Express. 
+							Express is maintained by the Node.js foundation and numerous open source contributors.
+							<h3 class ="h3"><strong>Click here for </strong><a href="express.html"><i>Expressjs Tutorial</a></i></h3>
+						</p> 
+						<br>
+						<h2>MongoDB</h2>
+                        <p>
+							AngularJS is a structural framework for dynamic web apps. 
+							It lets you use HTML as a template language for the projects and apps we build and it also lets us extend the syntax of HTML so we can express our application's components clearly and efficiently. 
+							AngularJS's data binding and dependency injection eliminate much of the code we  would otherwise have to write if we were not using AngularJS.
+							<h3 class ="h3"><strong>Click here for </strong><a target="_blank" href="https://www.mongodb.com/new?tck=sitebannerdotlive"><i>Informations!</a></i></h3>
+						</p> 
+						<br>
+						<h2>AngularJS</h2>
+                        <p>
+							MongoDB is an open source database management system (DBMS) that uses a document-oriented database model that supports all kinds of data. 
+							It is one of numerous nonrelational database technologies which arose in the mid-2000s for use in very large data applications and processing jobs that involved data that did not fit well in a relational model. 
+							Instead of using tables and rows like relational databases,  MongoDB architecture is made up of collections and documents.
+							<h3 class ="h3"><strong>Click here for </strong><a target="_blank" href="https://angular.io/"><i>Informations!</a></i></h3>
+						</p>	
+						<br>
 					</div>
 					
-				</div>
-				<div class="cover">
-					<img src="./image/mean.png" alt="MEAN stack data transfer" />
 				</div>
 			</section>
 
 		</main>
 	</body>
+	<br>
+	<footer class="footer">
+        <p>Copyright &copy;ITC134 SP2020</p>
+    </footer>
 </html>

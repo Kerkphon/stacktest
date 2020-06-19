@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+            <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet"/>
+            <link rel="stylesheet" href="./css/content.css" />
+        <title>Hello World</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo-container">
+                <img src="./image/stack.png"alt="logo" />
+                <h4 class="logo"> <b>Express & Node with GCP <br>Application Stack</p></b></h4>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="node.html">Node</a></li>
+                    <li><a class="nav-link" href="express.html">Express</a></li>
+                    <li><a class="nav-link" href="helloWorld.html">Hello World</a></li>
+                </ul>
+            </nav>
+            <div class="gitHub">
+                <a target="_blank" href="https://github.com/Kerkphon/stacktest"> 
+                <img src="./image/githublogo.png" alt="gitHub" /> </a>
+            </div>
+        </header>
+
+        <main>
+            <div class="cover">
+                <img src="./image/helloWorld.png" alt="MEAN stack data transfer" />
+            </div>
+            <section class="presentation">
+                <div class="introduction">
+                    <div class="intro-text">
+                        <h1>Hello World Tutorial!</h1>
+                        <p>
+                            In this tutorial, we will build a simple web application using part of the MEAN stack. 
+                            We'll run the "Hello World" application on Google Cloud using Node.js and Express.js! 
+                            This includes creating a Virtual Machine, installing git, nodejs, and npm. 
+                            The Github icon is on the top right of the page. This will take you to the repository to clone/fork the repository if you're feeling adventurous. 
+                            Be sure the files’ names are correct and call the right PORT name on your VM. 
+                            Ready to make the first application? It begins right here!
+
+
+                        </p>
+                        <br>
+                        <h2>Create VM Instance</h2>
+                            <p>1. Create your instance name to: helloworld-vm</p> 
+                        <br>
+                            <p>2. Boot disk: Google Debian GNU/Linux(default)</p> 
+                        <br>
+                            <p>3. Machine type: changed to small(1 shared vCPU, 1.7 GB memory)</p> 
+                        <br>
+                            <p>4. Check both HTTP & HTTPS boxes then create</p> 
+                        <br>
+                            <p>5. Go into Networking > VPC Network > Firewall</p> 
+                        <br>
+                            <p>6. Edit the rules for "default-allow-http" & "default-allow-https" adding port number 3000</p> 
+                        <br>
+                        <h2>Install Node</h2>
+                        <p>1. First get all the new update for your VM</p> 
+                        <p> 
+                            <pre class="chroma">
+                                <code class="language-output" data-lang="output">sudo apt-get update</code>
+                            </pre>
+                        </p>
+                        <br>
+                        <p>2. Install Nodejs</p> 
+                        <p> 
+                            <pre class="chroma">
+                                <code class="language-output" data-lang="output">sudo apt-get install -y nodejs</code>
+                            </pre>
+                        </p>
+                        <br>
+                        <p>3. Install Node Package Management</p> 
+                        <p> 
+                            <pre class="chroma">
+                                <code class="language-output" data-lang="output">sudo apt-get install npm</code>
+                            </pre>
+                        </p>
+                        <br>
+                        <p>4. Check if Node is running </p> 
+                        <p> 
+                            <pre class="chroma">
+                                <code class="language-output" data-lang="output">node -v </code>
+                            </pre>
+                        </p>
+                        <br>
+                        <p>5. Check if Node Package Management is running</p>
+                        <p>
+                            <pre class="chroma">
+                                <code class="language-output" data-lang="output">npm -v </code>
+                            </pre>
+                        </p>
+                        <br>
+                            <h2>Install Express</h2>
+                            <p>1. Initialize a package.json file with the following command</p> 
+                            <p> 
+                                <pre class="chroma">
+                                    <code class="language-output" data-lang="output"> sudo npm init</code>
+                                </pre>
+                            </p>
+                            <br>
+                            <p>2. Add a start script to your package.json file</p> 
+                            <p> 
+                                <pre class="chroma">
+                                    <code class="language-output" data-lang="output">"script":{ <br>"start": "app.js"</code>
+                                </pre>
+                            </p>
+                            <br>
+                            <p>3. Install Express.js</p> 
+                            <p> 
+                                <pre class="chroma">
+                                    <code class="language-output" data-lang="output">sudo npm install --save express</code>
+                                </pre>
+                            </p>
+                            <br>
+                            <h2>Code Hello World!</h2>
+                            <p>1. In the shell, create an server.js file with the following command</p> 
+                            <p> 
+                                <pre class="chroma">
+                                    <code class="language-output" data-lang="output">sudo vim server.js</code>
+                                </pre>
+                            </p>
+                            <br>
+                            <p>2. Insert the following codes</p> 
+                            <p> 
+                                <pre class="chroma">
+                                    <code class="language-output" data-lang="output">const express = require('express');<br>const app = express();<br>app.get('/', (req, res) => {<br>   res.send('Hello World!');});</code>
+                                </pre>
+                            </p>
+                            <br>
+                            <h2>Start Node Server</h2>
+                            <p>1. Start the server with the command</p> 
+                            <p> 
+                                <pre class="chroma">
+                                    <code class="language-output" data-lang="output">node app.js</code>
+                                </pre>
+                            </p>
+                            <br>
+                            <p>2. Connect to it by clicking the VM's IP address and appending port 3000</p> 
+                            <br>
+                            <p>3. If IP address doesn't open, you can copy the IP and paste it to the web browser</p> 
+                            <br>
+                            <p>4. Make sure to add Port 3000 after the IP adress</p> 
+                            <p> 
+                                <pre class="chroma">
+                                    <code class="language-output" data-lang="output">:3000</code>
+                                </pre>
+                            </p>
+                            <br>
+                            <p>5. You see a response from the web broswer</p>
+                            <p> 
+                                <pre class="chroma">
+                                    <code class="language-output" data-lang="output">Hello World!</code>
+                                </pre>
+                            </p>
+                            <br>
+                            <br>
+                    </div>
+                    
+                </div>
+                
+            </section>
+
+        </main>
+        
+    </body>
+    <footer class="footer">
+        <p>Copyright &copy;ITC134 SP2020</p>
+    </footer>
+</html>
